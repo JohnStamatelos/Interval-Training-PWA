@@ -4,6 +4,13 @@
     background-size: cover;
 }
 
+.span-bg-l{
+    font-size: 5em;
+    background: transparent;
+    color: white;
+}
+
 .bg-l{
-    background: white;
+    @extend .span-bg-l;
+        font-size: 4em;   
 }
