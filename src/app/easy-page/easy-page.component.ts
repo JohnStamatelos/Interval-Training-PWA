@@ -21,19 +21,19 @@ export class EasyPageComponent implements OnInit {
 
       // a [routerLink]="['/about']">About Us</a>
     );
-    this.prepareToSprint();
+    this.startSprintTimer();
   }
 
   ngOnInit() {
   }
 
-  prepareToSprint() {
+  startSprintTimer() {
     setTimeout(() => {
-      this.letsSprint();
+      this.navigateToSprint();
     }, (this.count * 1000));
   }
 
-  letsSprint() {
+  navigateToSprint() {
     console.log('navigate to sprint page')
   }
 
