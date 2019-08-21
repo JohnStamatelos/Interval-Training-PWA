@@ -10,9 +10,9 @@ import { Router } from '@angular/router';
 })
 export class EasyPageComponent implements OnInit {
   counter$: Observable<number>;
-  count = 90;
+  count = 9; //Change to 90 after dev done
 
-  constructor() {
+  constructor(private router: Router) {
 
 
     this.counter$ = timer(0, 1000).pipe(
@@ -34,7 +34,7 @@ export class EasyPageComponent implements OnInit {
   }
 
   navigateToSprint() {
-    console.log('navigate to sprint page')
+    this.router.navigate(['/sprint']);
   }
 
 
