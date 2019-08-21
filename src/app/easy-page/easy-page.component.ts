@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class EasyPageComponent implements OnInit {
   counter$: Observable<number>;
-  count = 9; //Change to 90 after dev done
+  count = 90;
 
   constructor(private router: Router) {
 

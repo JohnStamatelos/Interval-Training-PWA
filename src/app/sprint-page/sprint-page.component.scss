@@ -1,0 +1,16 @@
+.bg{
+    background: url('../../assets/img/sprint3.jpeg');
+    // height: -webkit-fill-available;
+    background-size: cover;
+}
+
+.span-bg-l{
+    font-size: 5em;
+    background: transparent;
+    color: white;
+}
+
+.bg-l{
+    @extend .span-bg-l;
+        font-size: 4em;   
+}
