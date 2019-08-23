@@ -12,6 +12,8 @@ export class SprintPageComponent implements OnInit {
   counter$: Observable<number>;
   count = 30;
 
+  reps : number;
+
   repetitions: number = +localStorage.getItem('repetitions') + 1;
 
   constructor(private router: Router) {
@@ -24,6 +26,7 @@ export class SprintPageComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.reps = + localStorage.getItem('repetitions') + 1;
   }
 
   startSprintTimer() {
