@@ -11,10 +11,9 @@ import { Router } from '@angular/router';
 export class EasyPageComponent implements OnInit {
   counter$: Observable<number>;
   count = 90;
+  reps : number;
 
   constructor(private router: Router) {
-
-
     this.counter$ = timer(0, 1000).pipe(
       take(this.count),
       map(() => --this.count)
@@ -25,6 +24,7 @@ export class EasyPageComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.reps = +localStorage.getItem('repetitions') + 1;
   }
 
   startSprintTimer() {
@@ -37,6 +37,4 @@ export class EasyPageComponent implements OnInit {
     this.router.navigate(['/sprint']);
   }
 
-
 }
-
