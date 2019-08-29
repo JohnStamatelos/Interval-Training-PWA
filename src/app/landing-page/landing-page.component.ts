@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as NoSleep from 'nosleep.js';
 
 @Component({
   selector: 'app-landing-page',
@@ -6,8 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./landing-page.component.scss']
 })
 export class LandingPageComponent implements OnInit {
+  noSleep: any;
 
   constructor() {
+    this.noSleep = new NoSleep.default();
+    this.noSleep.enable();
     localStorage.setItem('repetitions', '0');
   }
 
